@@ -1,0 +1,34 @@
+@import url("https://fonts.googleapis.com/css2?family=Gabarito:wght@400;500;600;700;800;900&family=Roboto+Slab&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gabarito:wght@400;500;600;700;800;900&family=Montserrat:wght@400;600;700&family=Roboto+Slab&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  font-family: "Gabarito", sans-serif;
+  @apply min-w-full h-screen;
+  @apply bg-gray-300/50;
+  @apply box-border;
+}
+
+table {
+  @apply border-collapse;
+}
+
+thead tr th {
+  @apply border border-solid border-gray-400 py-1 bg-gray-300/50;
+}
+
+tbody tr td {
+  @apply border border-solid border-gray-300 py-1 text-center text-gray-900;
+}
+
+@layer utilities {
+  .animation-delay-2000 {
+    animation-delay: 2s;
+  }
+  .animation-delay-3000 {
+    animation-delay: 3s;
+  }
+}
