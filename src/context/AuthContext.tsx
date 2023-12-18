@@ -36,7 +36,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
     localStorage.setItem("role", userData?.role?.role ?? "");
     localStorage.setItem(
       "isSuperAdmin",
-      userData.role.id == Role.Admin ? "true" : "false"
+      userData.role.id.toString() === Role.Admin ? "true" : "false"
     );
     setUser(userData);
   };

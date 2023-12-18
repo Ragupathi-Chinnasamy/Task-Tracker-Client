@@ -12,7 +12,7 @@ export const navLinks = [
     to: "/users",
   },
   {
-    title: "Task",
-    to: "/tasks",
+    title: "Issues",
+    to: "/issues",
   },
 ];

@@ -3,6 +3,7 @@ import { useForm } from "@mantine/form";
 import { useRoleStore } from "@src/app/roleStore";
 import { useUserStore } from "@src/app/userStore";
 import { CustomButton, CustomModal } from "@src/components";
+import UpdateButton from "@src/components/UpdateButton";
 import { UserRes, updateUserFormInput } from "@src/models/user-model";
 import apiProvider from "@src/network/ApiProvider";
 import { Role } from "@src/utils/enums";
@@ -122,20 +123,14 @@ export default function UpdateUser({ data }: { data: UserRes }) {
                 width="w-full"
                 type="submit"
                 title="Update User"
-                bgColor="bg-blue-400/70"
-                textColor="text-black"
+                bgColor="bg-primary"
+                textColor="text-white/90"
               />
             </div>
           </form>
         }
       </CustomModal>
-      <CustomButton
-        type="button"
-        onClick={() => setIsModalOpen(!isModalOpen)}
-        title="Update"
-        bgColor="bg-blue-300/70"
-        textColor="text-black"
-      />
+      <UpdateButton onClick={() => setIsModalOpen(!isModalOpen)} />
     </section>
   );
 }

@@ -1,7 +1,7 @@
 import { showNotification } from "@mantine/notifications";
 import { AxiosError, AxiosResponse, HttpStatusCode } from "axios";
 import apiClient from "./ApiClient";
-import { GetTask } from "@src/models/task";
+import { GetIssues } from "@src/models/issue";
 import { LoginInput } from "@src/models/auth";
 import {
   CreateProjectInput,
@@ -17,7 +17,7 @@ export class ApiProvider {
 
   showAlertNotification(message: string, success: boolean) {
     showNotification({
-      color: success ? "#4b5563" : "#dc2626",
+      color: success ? "#5D3587" : "#9A031E",
       title: success ? "Success" : "Error",
       message,
     });
@@ -248,7 +248,7 @@ export class ApiProvider {
     }
   }
 
-  async fetchTaskData(getTaskData: GetTask) {
+  async fetchTaskData(getTaskData: GetIssues) {
     try {
       const response = await this.server.get("task", {
         params: getTaskData,

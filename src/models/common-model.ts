@@ -11,7 +11,7 @@ export interface GetReq {
   search: string;
 }
 
-export type createdOrModifiedUser = {
+export type CreatedOrModifiedUser = {
   id: number;
   firstName: string;
   lastName: string;

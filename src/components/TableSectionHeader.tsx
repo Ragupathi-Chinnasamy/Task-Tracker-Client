@@ -1,6 +1,6 @@
 import { Input } from "@mantine/core";
 import React from "react";
-import { CustomButton } from ".";
+import { IconSearch } from "@tabler/icons-react";
 
 interface TableSectionHeaderProps {
   reference: React.RefObject<HTMLInputElement>;
@@ -26,13 +26,15 @@ function TableSectionHeader({
         <section className="flex gap-2 items-center mr-10">
           <Input placeholder="Search" radius="md" size="md" ref={reference} />
           <div>
-            <CustomButton
-              type="button"
-              title="Search"
-              bgColor="bg-gray-600/60"
-              textColor="text-white"
+            <button
+              className="px-4 py-1.5 rounded-md border border-solid border-primary bg-white/60"
               onClick={onSubmit}
-            />
+            >
+              <span className="flex items-center justify-center gap-1.5 text-primary">
+                <IconSearch size={16} />
+                Search
+              </span>
+            </button>
           </div>
         </section>
       </section>

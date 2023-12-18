@@ -2,6 +2,7 @@ import { TextInput } from "@mantine/core";
 import { useForm } from "@mantine/form";
 import { useProjectStore } from "@src/app/projectStore";
 import { CustomButton, CustomModal } from "@src/components";
+import UpdateButton from "@src/components/UpdateButton";
 import { ProjectRes, projectFormInput } from "@src/models";
 import apiProvider from "@src/network/ApiProvider";
 import { zodResolver } from "mantine-form-zod-resolver";
@@ -88,20 +89,14 @@ function UpdateProject({ data }: { data: ProjectRes }) {
                 width="w-full"
                 type="submit"
                 title="Update Project"
-                bgColor="bg-blue-400/70"
-                textColor="text-black"
+                bgColor="bg-primary"
+                textColor="text-white"
               />
             </div>
           </form>
         }
       </CustomModal>
-      <CustomButton
-        type="button"
-        onClick={() => setIsModalOpen(!isModalOpen)}
-        title="Update"
-        bgColor="bg-blue-300/70"
-        textColor="text-black"
-      />
+      <UpdateButton onClick={() => setIsModalOpen(!isModalOpen)} />
     </section>
   );
 }

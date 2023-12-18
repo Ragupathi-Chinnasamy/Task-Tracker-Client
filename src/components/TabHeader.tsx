@@ -17,7 +17,7 @@ function TabHeader() {
               to={link.to}
               className={({ isActive }) =>
                 isActive
-                  ? "text-black text-lg no-underline"
+                  ? "text-black no-underline font-extrabold"
                   : "no-underline text-black/60"
               }
             >

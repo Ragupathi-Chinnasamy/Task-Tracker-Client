@@ -67,7 +67,7 @@ export default function CreateProject() {
                 width="w-full"
                 type="submit"
                 title="Create Project"
-                bgColor="bg-green-700"
+                bgColor="bg-primary"
                 textColor="text-white"
               />
             </div>
@@ -78,7 +78,7 @@ export default function CreateProject() {
         type="button"
         onClick={() => setIsModalOpen(!isModalOpen)}
         title="Create Project"
-        bgColor="bg-green-700"
+        bgColor="bg-primary"
         textColor="text-white"
       />
     </section>

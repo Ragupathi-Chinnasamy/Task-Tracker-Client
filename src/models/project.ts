@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { createdOrModifiedUser } from ".";
+import { CreatedOrModifiedUser } from ".";
 
 export const projectFormInput = z.object({
   title: z
@@ -29,6 +29,6 @@ export type ProjectRes = {
   createdAt: string;
   updatedAt: string;
   deletedAt: null | string;
-  createdUser: createdOrModifiedUser | null;
-  modifiedUser: null | createdOrModifiedUser;
+  createdUser: CreatedOrModifiedUser | null;
+  modifiedUser: null | CreatedOrModifiedUser;
 };

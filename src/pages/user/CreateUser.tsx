@@ -15,6 +15,7 @@ export default function CreateUser() {
   const { fetchData: fetchUserData } = useUserStore();
 
   const form = useForm<CreateUserInput>({
+    validateInputOnChange: true,
     initialValues: {
       firstName: "",
       lastName: "",
@@ -122,8 +123,8 @@ export default function CreateUser() {
                 width="w-full"
                 type="submit"
                 title="Create User"
-                bgColor="bg-green-700"
-                textColor="text-white"
+                bgColor="bg-primary"
+                textColor="text-white/90"
               />
             </div>
           </form>
@@ -133,8 +134,8 @@ export default function CreateUser() {
         type="button"
         onClick={() => setIsModalOpen(!isModalOpen)}
         title="Create User"
-        bgColor="bg-green-700"
-        textColor="text-white"
+        bgColor="bg-primary"
+        textColor="text-white/95"
       />
     </section>
   );

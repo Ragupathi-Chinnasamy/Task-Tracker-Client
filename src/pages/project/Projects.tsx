@@ -48,7 +48,7 @@ export default function Projects() {
           <tr key={project.title}>
             <td>{index + data.from}</td>
             <td>{project.title}</td>
-            <td>{project.description}</td>
+            <td className="max-w-xs">{project.description}</td>
             <td>
               <div>
                 {project.createdUser?.firstName} {project.createdUser?.lastName}

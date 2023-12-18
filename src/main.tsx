@@ -13,7 +13,7 @@ import Dashboard from "./pages/Dashboard.tsx";
 import HomePage from "./pages/Home.tsx";
 import Projects from "./pages/project/Projects.tsx";
 import Users from "./pages/user/Users.tsx";
-import Tasks from "./pages/task/Tasks.tsx";
+import Issues from "./pages/issues/Issues.tsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -23,7 +23,7 @@ const router = createBrowserRouter(
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/users" element={<Users />} />
-        <Route path="/tasks" element={<Tasks />} />
+        <Route path="/issues" element={<Issues />} />
       </Route>
     </Route>
   )

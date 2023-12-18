@@ -8,7 +8,14 @@ import { AuthProvider } from "./context/AuthContext";
 
 export default function App() {
   return (
-    <MantineProvider>
+    <MantineProvider
+      theme={{
+        fontFamily: "Gabarito, sans-serif",
+        headings: {
+          fontFamily: "Gabarito, sans-serif",
+        },
+      }}
+    >
       <Notifications zIndex={1000} />
       <AuthProvider>
         <Outlet />

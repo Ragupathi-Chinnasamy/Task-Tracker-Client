@@ -1,6 +1,6 @@
 import { z } from "zod";
 import { Role } from "@src/utils/enums";
-import { ProjectRes, createdOrModifiedUser } from ".";
+import { ProjectRes, CreatedOrModifiedUser } from ".";
 import { RoleRes } from "./role";
 
 export const createUserFormInput = z.object({
@@ -53,8 +53,8 @@ export type UserRes = {
   createdAt: string;
   updatedAt: string;
   deletedAt: string | null;
-  createdByUser: createdOrModifiedUser | null;
-  modifiedByUser: createdOrModifiedUser | null;
+  createdByUser: CreatedOrModifiedUser | null;
+  modifiedByUser: CreatedOrModifiedUser | null;
   createdProjects: ProjectRes[];
   role: RoleRes;
 };

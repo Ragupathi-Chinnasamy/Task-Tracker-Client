@@ -25,7 +25,7 @@ function Table({
   onPageChanged,
 }: TableProps) {
   return (
-    <section>
+    <section className="min-w-full">
       <ScrollArea>
         <table className="w-full table">
           <thead className="text-lg uppercase">
@@ -57,7 +57,7 @@ function Table({
             radius="lg"
             total={isLoading ? 1 : totalPages}
             value={isLoading ? 0 : currentPage}
-            color="#9ca3af"
+            color="#5D3587"
             onChange={isLoading ? () => {} : onPageChanged}
           />
         </div>
